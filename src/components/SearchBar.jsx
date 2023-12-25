@@ -4,8 +4,9 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 const SearchBar = ({ setChats }) => {
 
   const [query, setQuery] = useState("");
+  const chatApi = import.meta.env.VITE_GEMINI_API ;
 
-  const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API);
+  const genAI = new GoogleGenerativeAI(chatApi);
 
   const handleQuery = async () => {
 
